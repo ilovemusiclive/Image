@@ -1,0 +1,15 @@
+<h3>Show car page</h3>
+
+<h3><%= @car.event.name %></h3></br>
+<h3><%= @car.manufacturer.name %></h3></br>
+<h3><%= @car.modell.name %></h3></br>
+<h4>Description:</h4><h5><%= @car.description %></h5></br>
+
+
+<%= link_to "Back", cars_path %></br>
+<% if user_signed_in? %>
+<% if @car.user_id == current_user.id %>
+<%= link_to "edit", edit_car_path(@car) %>
+<%= link_to "Delete", car_path(@car), method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>
+<% end %>

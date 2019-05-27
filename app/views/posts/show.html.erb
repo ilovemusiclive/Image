@@ -1,0 +1,15 @@
+<p>Car: <%= @post.car.manufacturer.name %></p>
+
+<h3><%= @post.car.event.name %></h3></br>
+<h3><%= @post.car.manufacturer.name %></h3></br>
+<h3><%= @post.car.modell.name %></h3></br>
+<h4>Description:</h4><h5><%= @post.car.description %></h5></br>
+
+
+<%= link_to "Back", posts_path %></br>
+<% if user_signed_in? %>
+<% if @post.user_id == current_user.id %>
+<%= link_to "edit", edit_post_path(@post) %>
+<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>
+<% end %>

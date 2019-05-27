@@ -1,0 +1,7 @@
+<h3>Show Model Page</h3>
+
+<h2><%= @modell.name %></h2>
+
+<%= link_to "Back", modells_path %>
+<%= link_to "edit", edit_modell_path(@modell) %>
+<%= link_to "Delete", modell_path(@modell), method: :delete, data: { confirm: "Are you sure?" } %>

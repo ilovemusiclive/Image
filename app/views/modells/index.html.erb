@@ -1,0 +1,8 @@
+<h3>Index Model Page</h3>
+
+<%= link_to "Home", root_path %></br></br>
+<%= link_to "Create Model", new_modell_path %></br></br>
+
+<% @modells.each do |modell| %>
+<h2><%= link_to modell.name, modell_path(modell) %></h2>
+<% end %>

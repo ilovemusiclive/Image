@@ -1,0 +1,13 @@
+<h3>Edit car page</h3>
+
+<%= simple_form_for @car, :html => { :multipart => true } do |f| %>
+
+<%= f.select :manufacturer_id, @manufacturers %>
+
+<%= f.select :modell_id, @modells %>
+
+<%= f.select :event_id, @events %>
+
+  <%= f.input :description, as: :text %>
+  <%= f.button :submit %>
+<% end %>

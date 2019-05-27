@@ -1,0 +1,12 @@
+
+<%= simple_form_for @post, :html => { :multipart => true } do |f| %>
+
+<%= select_tag(:manufacturer_id, options_for_select(@manufacturers), :prompt => "Select a Manufacturer") %>
+
+<%= select_tag(:modell_id, options_for_select(@modells), :prompt => "Select a Model") %>
+
+<%= select_tag(:event_id, options_for_select(@events), :prompt => "Select an Event") %>
+
+  <%= f.input :description, as: :text %>
+  <%= f.button :submit %>
+<% end %>
