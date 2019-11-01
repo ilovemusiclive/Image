@@ -32,7 +32,7 @@ gem 'simple_form', '~> 4.1'
 gem 'better_errors', '~> 2.5', '>= 2.5.1'
 gem 'binding_of_caller', '~> 0.8.0'
 
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 
 
 # Use ActiveStorage variant
